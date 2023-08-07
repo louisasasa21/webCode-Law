@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #d5d7df;
+    /* padding-top: 60px; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* เริ่มส่วน .nav-menuindex  */
+.nav-menuindex {
+    background-color:  rgb(144, 12, 63) ;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+}
+
+.container-nav {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container-nav .logo img {
+    border-radius: 49%;
+}
+
+.menu {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    gap: 60px;
+}
+
+.menu  li {
+    list-style: none;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 8%;
+}
+
+.menu  li a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+}
+
+.menu  li:hover {
+    background-color: #FFC300;
+}
+
+.menu .active {
+    background-color: #FFC300;
+}
+
+.nav-toggle {
+    margin: 1rem 0;
+    color: white;
+}
+
+.logo img {
+    width: 70px;
+    border-radius: 20%;
+    margin: 10px;
+}
+
+.link-nav {
+    transition: 0.2s ease;
+    padding: 1rem;
+}
+
+.active .link-nav {
+    color: #900C3F;
+}
+
+.link-nav:hover {
+    color: #900C3F;
+}
+
+/* จบ .nav-menuindex  */
+
+/* Hamburger Menu */
+.container-hambrugerMenu {
+    display: inline-block;
+    cursor: pointer; 
+    position: absolute;
+    right: 1rem;
+    top:1rem;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #edecec;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+  /* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+  /* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+/* จบ Hamburger Menu  */
+/* จบ nav-menuindex*/
+
+/* เริ่มส่วนของ .Slideshow-img*/
+.Slideshow-img {
+    padding: 2rem;
+    margin-top: 3rem;
+    /* border: 1px solid red; */
+    background-color: #380d2b;
+    border-radius: 15% 0 ;
+}
+
+.container-slidwshow {
+    display: flex;
+    /* padding: 3rem; */
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: #900C3F;
+    border-radius: 4% ;
+    /* border: 1px solid red; */
+}
+
+/* .slidesshow-img-com {
+    border: 1px solid red;
+} */
+
+.mySlideshow-img {
+    /* border: 1px solid darkgreen; */
+    display: none;
+}
+
+.mySlideshow-img img {
+    /* border:  1px solid rgb(0, 255, 26); */
+    object-fit: cover;
+    margin:  0;
+    padding: 1rem;
+    width: 800px;
+    max-height: 450px;
+    border-radius: 5% 0 0 5%;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: #FFC300;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    left: 47.5rem;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+
+.dots {
+    position: relative;
+    margin: 0 auto;
+    top: -3rem;
+    left: -13.5rem;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 5px;
+    width: 40px;
+    margin: 0 2px;
+    background-color: #FFC300;
+    border-radius: 10%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #363434;
+}
+
+.sh-item {
+    align-items: center;
+    margin: 0 1rem ;
+    padding: 0 2rem;
+    box-shadow: 2px 2px 8px #1a1919;
+    /* background-color: #900C3F; */
+    /* border: 1px solid black; */
+}
+
+hr {
+    color: #FFC300;
+    border-color: #FFC300;
+    background-color: #FFC300;
+    height: 4px;
+}
+
+.sh-img {
+    margin:0.5rem;
+    border-width:   15px; 
+    /* border-style: dashed;
+    border-color: #fff;
+    border-radius: 4px; */
+    /* outline: 5px  dashed #fff; */
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+}
+
+.sh-img img {
+    max-width: 250px;
+    border-radius: 10%;
+    /* margin-left: 3.5rem; */
+}
+  
+.sh-com {
+    /* border: 1px solid rgb(82, 47, 255); */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sh-title {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 1rem ;
+    padding: 0.5rem 0;
+    color: #fff;
+    filter: drop-shadow(6px 2px 3px #282728) ;
+}
+
+.sh-info {
+    text-align: left ;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    max-width: 230px;
+    color: #fff;
+    filter: drop-shadow(6px 2px 3px #282728) ;
+    /* border: 1px solid red; */
+}
+/* จบวนของ .Slideshow-img*/
+
+/* ส่วน section class="about-title"  เริ่ม*/
+.about-title {
+    position: relative;
+}
+
+.about-title {
+    /* border: 1px solid green; */
+    padding: 2rem;
+    max-width: 700px;
+    height: 50px;
+    background-color: #900C3F;
+    border-radius: 0 50px 50px 0;
+}
+
+.about-title h1 {
+    position: absolute;
+    top: 0;
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #FFC300;
+    filter: drop-shadow(4px 2px 3px #282728) ;
+}
+   
+.about-title h1::first-letter {
+    font-size: 3rem;
+}
+/* จบ section class="about-title" */
+
+/* เริ่ม main */
+main {
+    position: relative;
+}
+
+.container-maim {
+    max-width: 100%;
+    margin: auto;
+    /* background-color: #4D0638; */
+    /* border: 1px solid green; */
+}
+
+.ImageOverlay-Title > figure {
+    display: flex;
+    /* border: 1px solid red; */
+    /* outline: 9px dashed #170f0f; */
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+figure {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.overlay-title {
+    /* border: 1px solid royalblue; */
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.Mr-Kim {
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 300px;
+    height: 100%;  
+    filter: drop-shadow(2px 2px 1px #282728); 
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.9); /* Black see-through */
+    color: #FFC300;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: #FFC300;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    filter: drop-shadow(1px 2px 2px #282728); 
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.overlay-title:hover .overlay {
+    opacity: 1;
+}
+
+.figcaption-com {
+    /* border: 1px solid red; */
+    margin: 2rem;
+    background-color: #900C3F;
+}
+
+.figcaption-com > h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 30px;
+    color: #fff;
+    filter: drop-shadow(2px 2px 3px #282728);
+}
+
+.figcaption-com > hr {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.figcaption-com > p {
+    color: #fff;
+    font-size: 19px;
+    margin: 1rem;
+    padding: 0.5rem 0;
+}
+/* จบ main */
+
+/* เริ่ม .ServiceContact*/
+.ServiceContact {
+    /* border: 1px solid green; */
+    height: 300px;
+    position: relative;
+    isolation: isolate;
+}
+
+.ServiceContact::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.9;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+
+    background-image: url(https://img.freepik.com/premium-photo/court-room-with-court-clock-wall_836919-1837.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ServiceContact > .container {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+    /* padding: 2rem; */
+    /* border: 1px solid green; */
+}
+
+.section-com {
+    width: 800px;
+    margin:  1rem 0  auto;
+    padding: 1rem 0 ;
+    /* border: 1px solid red; */
+}
+
+.section-com h2 {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn-com {
+    /* border: 1px solid royalblue; */
+    display: flex;
+    padding: 1rem;
+    max-width: 700px;
+}
+
+.btn-com button {
+    display: flex;
+    margin: 1rem ;
+    padding:1rem;
+    /* border: 1px solid blueviolet; */
+}
+
+.button1 {
+    border-radius: 30px;
+    background-color: #1e62f4;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button2 {
+    border-radius: 30px;
+    background-color: #e42424;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button3 {
+    border-radius: 30px;
+    background-color: #24e444;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button1:hover span {
+    padding-right: 25px;
+}
+  
+.button1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button2:hover span {
+    padding-right: 25px;
+}
+  
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button3 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button3 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button3:hover span {
+    padding-right: 25px;
+}
+  
+.button3:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/* จบ .ServiceContact*/
+
+.csimg-com {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.ContactShow {
+    margin: 2rem 0 auto;
+}
+
+.chimgMyshow {
+    /* display: none; */
+    /* border: 1px solid red; */
+    background-color: #380d2b;
+    filter: drop-shadow(2px 2px 3px #282728);
+    border-radius: 15px;
+    margin: 1rem auto;
+    padding: 1rem;
+    height: 400px;
+
+}
+
+.chimgMyshow img {
+    max-width: 230px;
+    height: 180px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 ;
+}
+
+.chimgMyshow p {
+    color: #FFC300;
+    padding: 1rem 0;
+    width: 250px;
+}
+
+footer {
+    /* border: 1px solid red; */
+    height: 300px;
+    background-color: #380d2b;
+}
+
+.footer-com {
+    display: flex;
+    margin: 2rem 0 auto;
+    padding: 1rem;
+    color: #fff;
+}
+
+.footer-item {
+    padding: 0 1rem;
+}
+
+.footer-title h3 {
+    color: #FFC300;
+    margin: 0 1rem;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p {
+    color: #dee9f3;
+    background-color: #1a1919;
+    padding: 5px 0;
+}
+
+/* ส่วนของการทำ Responsive website */
+@media only screen and (min-width: 821px){
+    .hambrugre-menu {
+        display: none;
+    } 
+}
+
+@media only screen and (max-width: 820px) {
+    .menu {
+        display: none;
+    }
+
+   .container-nav {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-hambrugerMenu {
+        padding: 0 1rem;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu  li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+        padding: 1rem 0.5rem;    
+        /* border:  1px solid red; */
+    }
+
+    .menu li:hover {
+        background-color: rgb(68, 69, 69);
+        opacity: 0.8;
+    }
+    
+    .link-nav {
+        font-size: 20px;
+    }
+
+    .menu-active {
+        display: block;
+    }
+} 
